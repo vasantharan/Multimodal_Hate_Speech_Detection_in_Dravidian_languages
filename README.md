@@ -119,6 +119,11 @@ Naming convention:
 
 ---
 
+### 📌 **DOI Generation**
+The dataset and code are archived and assigned a **DOI** through **Zenodo** for proper citation and reference.
+
+---
+
 ## 👥 Authors
 - **Vasantharan K** ([📧 Email](mailto:vasantharank.work@gmail.com))
 - **Prethish GA** ([📧 Email](mailto:prethish0409@gmail.com))
