@@ -1,5 +1,7 @@
 # 🚀 Multimodal Hate Speech Detection in Dravidian Languages
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14847234.svg)](https://doi.org/10.5281/zenodo.14847234)
+
 ## 📌 Overview
 This repository contains the code and data for our participation in the **Shared Task on Multimodal Hate Speech Detection in Dravidian languages: DravidianLangTech@NAACL 2025**. The task involves detecting hate speech in **Malayalam, Tamil, and Telugu** using both **text and audio data**.
 
