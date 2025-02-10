@@ -19,6 +19,64 @@ We participated in all three tasks and achieved the following rankings based on 
 2. **Telugu**: 15th place (F1-score = 0.1559)
 3. **Malayalam**: 12th place (F1-score = 0.3016)
 
+## Methodologies
+
+### Preprocessing Techniques
+1. **Text Preprocessing**:
+   - **Normalization**: Using `IndicNormalizerFactory` to normalize text.
+   - **Tokenization**: Tokenizing text using `indic_tokenize`.
+   - **Stopword Removal**: Removing stopwords using `advertools`.
+
+2. **Audio Preprocessing**:
+   - **Feature Extraction**: Extracting MFCC features using `librosa`.
+   - **Normalization**: Applying TTS-like normalization and dynamic audio normalization.
+
+### Models
+1. **Text Models**:
+   - **BERT-based Models**: Using `bert-base-multilingual-cased` and `xlm-roberta-large` for text embeddings.
+   - **Neural Networks**: Using Sequential models with Dense, Dropout, and BatchNormalization layers.
+
+2. **Audio Models**:
+   - **CNN-based Models**: Using Convolutional Neural Networks (CNN) for audio classification.
+
+### Data Augmentation
+- **Text Augmentation**: Using `nlpaug` for synonym augmentation.
+- **Audio Augmentation**: Adding noise, time-stretching, and pitch-shifting.
+
+## Model Comparison
+
+### Text Models
+| Model                     | Language  | Accuracy  |
+|---------------------------|-----------|-----------|
+| TF-IDF (Term Frequency Inverse Document Frequency) | Tamil     | 0.55      |
+| Count Vectorizer | Tamil     | 0.59      |
+| BERT (bert-base-multilingual-cased) | Tamil     | 0.67      |
+| XLM-RoBERTa (xlm-roberta-base)     | Tamil     | 0.73      |
+| XLM-RoBERTa (xlm-roberta-large)     | Tamil     | 0.83      |
+| TF-IDF (Term Frequency Inverse Document Frequency) | Telugu     | 0.58      |
+| Count Vectorizer | Telugu     | 0.60      |
+| BERT (bert-base-multilingual-cased) | Telugu    | 0.71      |
+| XLM-RoBERTa (xlm-roberta-base)     | Telugu    | 0.71      |
+| XLM-RoBERTa (xlm-roberta-large)     | Telugu    | 0.88      |
+| TF-IDF (Term Frequency Inverse Document Frequency) | Malayalam     | 0.58      |
+| Count Vectorizer | Malayalam     | 0.58      |
+| BERT (bert-base-multilingual-cased) | Malayalam | 0.73      |
+| XLM-RoBERTa (xlm-roberta-base)     | Malayalam | 0.72      |
+| XLM-RoBERTa (xlm-roberta-large)     | Malayalam | 0.85      |
+
+### Audio Models
+| Model                     | Language  | Accuracy  |
+|---------------------------|-----------|-----------|
+| CNN (without normalization) | Tamil     | 0.64      |
+| CNN (with normalization)    | Tamil     | 0.58      |
+| CNN (with augmentation)     | Tamil     | 0.88      |
+| CNN (without normalization) | Telugu    | 0.54      |
+| CNN (with normalization)    | Telugu    | 0.54      |
+| CNN (with augmentation)     | Telugu    | 0.88      |
+| CNN (without normalization) | Malayalam | 0.85      |
+| CNN (with normalization)    | Malayalam | 0.80      |
+| CNN (with augmentation)     | Malayalam | 0.93      |
+
 ## Dataset
 The dataset contains hate speech utterances sourced from YouTube videos for Malayalam, Tamil, and Telugu languages. The dataset has the following classes:
 
