@@ -122,7 +122,7 @@ Naming convention:
 ---
 
 ### 📌 **DOI Generation**
-The dataset and code are archived and assigned a **DOI** through **Zenodo** for proper citation and reference.
+The code is archived and assigned a **DOI** through **Zenodo** for proper citation and reference.
 
 ---
 
